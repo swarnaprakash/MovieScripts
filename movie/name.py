@@ -25,3 +25,11 @@ def extract(file_path):
     movie_name = ' '.join(valid_parts)
     return movie_name
 
+if __name__ == "__main__":
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("file_path", help="Path to the file or folder representing the movie")
+    args = parser.parse_args()
+
+    file_path = args.file_path
+    print extract(file_path)
